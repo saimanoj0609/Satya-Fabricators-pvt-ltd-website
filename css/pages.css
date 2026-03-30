@@ -1,0 +1,267 @@
+/* ============================================
+   SATYA FABRICATORS — Page-Specific Styles
+   About, Products, Contact pages
+   ============================================ */
+
+/* --- About Page --- */
+.about-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.about-banner__image {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+.about-banner__content h2 {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-4);
+}
+
+.about-banner__content p {
+  color: var(--color-gray-500);
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+/* Facility Cards */
+.facility__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.facility-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid var(--color-gray-200);
+  transition: all var(--transition-base);
+}
+
+.facility-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.facility-card__img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-off-white);
+  padding: var(--space-2);
+}
+
+.facility-card__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--color-gray-800);
+}
+
+.facility-card__list {
+  list-style: none;
+}
+
+.facility-card__list li {
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.facility-card__list li:last-child {
+  border-bottom: none;
+}
+
+/* Inspection Agencies */
+.agencies__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.agency-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-100);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.agency-item__number {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* --- Products Page --- */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.product-detail--reverse {
+  direction: rtl;
+}
+
+.product-detail--reverse > * {
+  direction: ltr;
+}
+
+.product-detail__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+}
+
+.product-detail__content h3 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+}
+
+.product-detail__content p {
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-4);
+  line-height: 1.7;
+}
+
+.product-specs {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid var(--color-gray-200);
+  margin-top: var(--space-6);
+}
+
+.product-specs__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  color: var(--color-gray-800);
+}
+
+.product-specs__item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-gray-100);
+  font-size: var(--text-sm);
+}
+
+.product-specs__item:last-child {
+  border-bottom: none;
+}
+
+.product-specs__label {
+  color: var(--color-gray-500);
+}
+
+.product-specs__value {
+  font-weight: 600;
+  color: var(--color-gray-800);
+}
+
+/* --- Contact Page --- */
+.contact-full__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-12);
+}
+
+.contact-info-block {
+  margin-bottom: var(--space-8);
+}
+
+.contact-info-block h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-gray-800);
+}
+
+.contact-info-block p {
+  font-size: var(--text-base);
+  color: var(--color-gray-500);
+  line-height: 1.7;
+}
+
+.contact-info-block a {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.contact-info-block a:hover {
+  text-decoration: underline;
+}
+
+/* Map Placeholder */
+.contact-map {
+  width: 100%;
+  height: 300px;
+  background: var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-400);
+  font-size: var(--text-lg);
+  border: 1px solid var(--color-gray-200);
+  margin-top: var(--space-8);
+  overflow: hidden;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --- Responsive for inner pages --- */
+@media (max-width: 1024px) {
+  .about-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail,
+  .product-detail--reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .contact-full__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .facility__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .agencies__grid {
+    grid-template-columns: 1fr;
+  }
+}
