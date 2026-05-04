@@ -31,9 +31,9 @@ A modern, production-ready static website for **Satya Fabricators Pvt Ltd**, a w
 **Key Highlights:**
 - 7 hydraulic presses (150T – 1200T capacity)
 - Spinning up to 4200mm diameter (Blue Valley USA Model 10)
-- Crown & Petal construction up to 15,000mm
+- Crown & Petal construction up to 10,000mm
 - ASME, BS, IS, and IBR certified
-- 40+ major industrial clients including BHEL, L&T, TISCO, and Thermax
+- 50+ major industrial clients including BHEL, L&T, TISCO, Thermax, and Air Liquide
 
 ---
 
@@ -43,7 +43,7 @@ A modern, production-ready static website for **Satya Fabricators Pvt Ltd**, a w
 |------|------|-------------|
 | **Home** | `index.html` | Hero banner, stats bar, capabilities, product grid, materials, certifications, customer showcase, CTA |
 | **About** | `about.html` | Company profile, press capacities table, spinning machine specs, facilities, quality control, inspection agencies |
-| **Products** | `products.html` | Detailed specs for Hemisphere, Semi-Ellipsoidal & Torispherical dished ends, plus 5 additional product types, materials, manufacturing codes |
+| **Products** | `products.html` | Detailed specs for Hemisphere, Semi-Ellipsoidal & Torispherical dished ends, plus 7 additional product types, recent work gallery, materials, manufacturing codes |
 | **Contact** | `contact.html` | Office address, phone, email, Google Maps embed, inquiry form with validation |
 
 ---
@@ -69,21 +69,30 @@ satyafab-new/
 │   ├── torispherical-dish-end.jpg
 │   ├── conical-dish-end.jpg
 │   ├── flat-dish-end.jpg
+│   ├── Flat-dish.jpeg
+│   ├── flat-bottoms.jpg
 │   ├── expansion-bellow.jpg
 │   ├── inverted-heads.jpg
 │   ├── dish-disc.jpg
 │   ├── dish-end.jpg
+│   ├── super-duplex-dish-end.jpg
 │   ├── carbon-steel-dish-end.jpg
 │   ├── stainless-steel-dish-end.jpg
 │   ├── alloy-steel-dish-end.jpg
 │   ├── duplex-pipe-dish-end.jpg
+│   ├── cupro-nickel-dish-end.jpg
 │   ├── monel-dish-end.jpg
 │   ├── nickel-dish-end.jpg
 │   ├── hastelloy-dish-end.jpg
 │   ├── inconel-dish-end.jpg
 │   ├── titanium-dish-end.jpg
 │   ├── steel-factory.jpg
-│   └── ... (27 images total)
+│   ├── HEMISPHERE-BY-PETAL-CONSTRUCTION.jpeg
+│   ├── 5meter-ID-Dish-by-petal-&-Crown-construct.jpeg
+│   ├── 5-meter-ID-Dish-by-petal-&-Crown-construction.jpeg
+│   ├── Cone-by-petal-construction.jpeg
+│   ├── Cone.jpeg / cone1.jpeg
+│   └── ... (34 images total)
 ├── .gitignore
 └── README.md
 ```
@@ -157,23 +166,26 @@ satyafab-new/
 
 | Type | Max Diameter | Max Thickness | Method |
 |------|-------------|---------------|--------|
-| **Hemisphere** | 15,000mm | 100mm | Cold Pressing, Crown & Petal |
-| **Semi-Ellipsoidal (2:1)** | 15,000mm | 100mm (CS) / 60mm (SS) | Cold Pressing, Crown & Petal |
-| **Torispherical** | 15,000mm | 100mm | Cold Pressing, Crown & Petal |
+| **Hemisphere** | 10,000mm | 100mm | Cold Pressing, Crown & Petal |
+| **Semi-Ellipsoidal (2:1)** | 10,000mm | 100mm (CS) / 60mm (SS) | Cold Pressing, Crown & Petal |
+| **Torispherical** | 10,000mm | 100mm | Cold Pressing, Crown & Petal |
 | **Conical** | Custom | Custom | Custom cone angles |
 | **Flat** | — | — | Low-pressure applications |
-| **Expansion Bellows** | — | — | Flexible expansion |
 | **Inverted Special** | — | — | Custom configurations |
 | **End Caps** | — | — | Standard & custom |
+| **Flat Bottom** | — | — | Tanks & storage vessels |
+| **Cone** | Custom | Custom | Specialized cone designs |
+| **Super Duplex** | — | — | Offshore & chemical processing |
 
 ### Materials
 
 - Carbon Steel
 - Stainless Steel
 - Cladded Steel
-- Copper
 - Aluminum
-- Monel
+- Super Duplex Steel
+- Inconel
+- Titanium
 
 ---
 
@@ -232,11 +244,10 @@ satyafab-new/
 | 1 | Lloyd's Register Asia |
 | 2 | Bureau Veritas India (BVI) |
 | 3 | Indian Boiler Regulations (IBR) |
-| 4 | UHDE India Ltd |
 | 5 | Engineers India Ltd (EIL) |
-| 6 | TECHNIP |
+| 6 | TUV |
 | 7 | NTPC |
-| 8 | Dept of Explosives, Nagpur |
+| 8 | TPL |
 | 9 | Indian Register of Shipping |
 
 ---
@@ -304,4 +315,4 @@ This site can be deployed to any static hosting provider:
 
 ---
 
-© 2025 Satya Fabricators Pvt Ltd. All Rights Reserved.
+© 2026 Satya Fabricators Pvt Ltd. All Rights Reserved.
