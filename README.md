@@ -33,7 +33,7 @@ A modern, production-ready static website for **Satya Fabricators Pvt Ltd**, a w
 - Spinning up to 4200mm diameter (Blue Valley USA Model 10)
 - Crown & Petal construction up to 10,000mm
 - ASME, BS, IS, and IBR certified
-- 47 industrial clients across India
+- 48 industrial clients across India
 
 ---
 
@@ -41,7 +41,7 @@ A modern, production-ready static website for **Satya Fabricators Pvt Ltd**, a w
 
 | Page | File | Description |
 |------|------|-------------|
-| **Home** | `index.html` | Hero banner, stats bar, capabilities, product grid, materials, certifications, lightbox gallery (9 images), customer list (47 clients), CTA |
+| **Home** | `index.html` | Hero banner, stats bar, capabilities, product grid, materials, certifications, lightbox gallery (9 images), customer list (48 clients), CTA |
 | **About** | `about.html` | Company profile, press capacities table, spinning machine specs, facilities (list format with highlighted Heat Treatment Furnace), quality control, inspection agencies |
 | **Products** | `products.html` | Detailed specs for Hemisphere, Semi-Ellipsoidal & Torispherical dished ends, plus 7 additional product types, lightbox gallery (17 images), materials, manufacturing codes |
 | **Contact** | `contact.html` | Office address, phone, email, Google Maps embed, inquiry form with Google Apps Script backend (emails + Google Sheet logging) |
@@ -344,3 +344,14 @@ This site can be deployed to any static hosting provider:
 ---
 
 © 2026 Satya Fabricators Pvt Ltd. All Rights Reserved.
+
+---
+
+## Recent Changes (May 2026)
+
+- **SEO:** Added "Telangana, India" to all page `<title>` tags for better local search visibility
+- **Customers:** Reordered customer list with priority clients at the top (BHEL, MEIL, ISGEC, Ashwini, Thermal Systems, Precision Equipments, Dynepro, KCP, Pennar)
+- **Customers:** Added new clients — KRR Engg Pvt Ltd (#11) and Sakthi Hi-Tech Fabrications (#12)
+- **Icons:** Replaced all emoji icons (📍📞📱✉️) with professional inline SVG icons (Feather style) in contact page details and footer across all pages
+- **CSS:** Added `.contact-icon` styling with circular accent-colored badges for contact section headings
+- **CSS:** Added `.footer__contact-item svg` styling for proper icon alignment in footer
