@@ -41,9 +41,9 @@ A modern, production-ready static website for **Satya Fabricators Pvt Ltd**, a w
 
 | Page | File | Description |
 |------|------|-------------|
-| **Home** | `index.html` | Hero banner, stats bar, capabilities, product grid, materials, certifications, workshop gallery, customer list (47 clients), CTA |
-| **About** | `about.html` | Company profile, press capacities table, spinning machine specs, facilities, quality control, inspection agencies |
-| **Products** | `products.html` | Detailed specs for Hemisphere, Semi-Ellipsoidal & Torispherical dished ends, plus 7 additional product types, recent work gallery, materials, manufacturing codes |
+| **Home** | `index.html` | Hero banner, stats bar, capabilities, product grid, materials, certifications, lightbox gallery (9 images), customer list (47 clients), CTA |
+| **About** | `about.html` | Company profile, press capacities table, spinning machine specs, facilities (list format with highlighted Heat Treatment Furnace), quality control, inspection agencies |
+| **Products** | `products.html` | Detailed specs for Hemisphere, Semi-Ellipsoidal & Torispherical dished ends, plus 7 additional product types, lightbox gallery (17 images), materials, manufacturing codes |
 | **Contact** | `contact.html` | Office address, phone, email, Google Maps embed, inquiry form with validation |
 
 ---
@@ -57,10 +57,10 @@ satyafab-new/
 ├── products.html           # Products & specifications
 ├── contact.html            # Contact information & inquiry form
 ├── css/
-│   ├── styles.css          # Full design system & component styles (~1000 lines)
-│   └── pages.css           # Page-specific styles for About, Products, Contact (~280 lines)
+│   ├── styles.css          # Full design system & component styles (~1100 lines)
+│   └── pages.css           # Page-specific styles for About, Products, Contact (~440 lines)
 ├── js/
-│   └── script.js           # Interactions, animations, form validation (~250 lines)
+│   └── script.js           # Interactions, animations, lightbox, form validation (~290 lines)
 ├── images/
 │   ├── logo.jpg            # Company logo
 │   ├── flash.jpg           # Hero banner & page header background
@@ -148,9 +148,23 @@ satyafab-new/
 - **Scroll-reveal animations** — elements fade in as they enter the viewport
 - **Counter animation** — stats bar values animate from 0 with easeOut easing
 - **Responsive header** — logo and text scale down gracefully on mobile to prevent overlap with banner content
+- **Lightbox modal** — full-screen image viewer with prev/next navigation and keyboard support
+- **"Learn More About Us" button** — links from home capabilities section to full About page
 
-### Workshop Gallery
-- 9-image gallery grid showcasing live factory floor operations (petal construction, crane handling, pressing, half-ring components, delivery)
+### Lightbox Gallery
+- **Index page:** 9-image thumbnail grid with full-screen lightbox modal viewer
+- **Products page:** 17-image gallery covering petal construction, crane handling, pressing, half-ring components, and delivery
+- Keyboard navigation (arrow keys, ESC to close)
+- Click-outside-to-close, previous/next buttons, image counter
+- Smooth transitions and responsive grid layout
+
+### Capability & Certification Cards
+- Image-free card design with orange top accent border
+- Clean focus on technical content without visual clutter
+
+### Facilities Section (About page)
+- Heat Treatment Furnace displayed as a professional highlighted card with left accent border and approval badge
+- Remaining facilities (Material Handling, Welding, Cutting, Grinding, Inspection) shown as compact list cards with arrow markers
 
 ### Page Headers
 - Full-bleed background image (`flash.jpg`) with dark gradient overlay on About, Products, and Contact pages

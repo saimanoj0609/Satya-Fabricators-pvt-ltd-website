@@ -216,4 +216,69 @@
   window.addEventListener('scroll', checkStats, { passive: true });
   window.addEventListener('load', checkStats);
 
+  // --- Lightbox Gallery ---
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxDesc = document.getElementById('lightboxDesc');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+
+  if (lightbox) {
+    const items = document.querySelectorAll('.lightbox-item');
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightbox();
+      lightbox.classList.add('lightbox--active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('lightbox--active');
+      document.body.style.overflow = '';
+    }
+
+    function updateLightbox() {
+      const item = items[currentIndex];
+      const img = item.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxTitle.textContent = item.dataset.title || '';
+      lightboxDesc.textContent = item.dataset.desc || '';
+      lightboxCounter.textContent = (currentIndex + 1) + ' / ' + items.length;
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateLightbox();
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateLightbox();
+    }
+
+    items.forEach(function (item, index) {
+      item.addEventListener('click', function () {
+        openLightbox(index);
+      });
+    });
+
+    lightbox.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
+    lightbox.querySelector('.lightbox__next').addEventListener('click', nextImage);
+    lightbox.querySelector('.lightbox__prev').addEventListener('click', prevImage);
+
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!lightbox.classList.contains('lightbox--active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    });
+  }
+
 })();
