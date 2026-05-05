@@ -33,7 +33,7 @@ A modern, production-ready static website for **Satya Fabricators Pvt Ltd**, a w
 - Spinning up to 4200mm diameter (Blue Valley USA Model 10)
 - Crown & Petal construction up to 10,000mm
 - ASME, BS, IS, and IBR certified
-- 50+ major industrial clients including BHEL, L&T, TISCO, Thermax, and Air Liquide
+- 47 industrial clients across India
 
 ---
 
@@ -41,7 +41,7 @@ A modern, production-ready static website for **Satya Fabricators Pvt Ltd**, a w
 
 | Page | File | Description |
 |------|------|-------------|
-| **Home** | `index.html` | Hero banner, stats bar, capabilities, product grid, materials, certifications, customer showcase, CTA |
+| **Home** | `index.html` | Hero banner, stats bar, capabilities, product grid, materials, certifications, workshop gallery, customer list (47 clients), CTA |
 | **About** | `about.html` | Company profile, press capacities table, spinning machine specs, facilities, quality control, inspection agencies |
 | **Products** | `products.html` | Detailed specs for Hemisphere, Semi-Ellipsoidal & Torispherical dished ends, plus 7 additional product types, recent work gallery, materials, manufacturing codes |
 | **Contact** | `contact.html` | Office address, phone, email, Google Maps embed, inquiry form with validation |
@@ -73,26 +73,33 @@ satyafab-new/
 │   ├── flat-bottoms.jpg
 │   ├── expansion-bellow.jpg
 │   ├── inverted-heads.jpg
-│   ├── dish-disc.jpg
-│   ├── dish-end.jpg
+│   ├── dish-disc.jpg / dish-end.jpg
 │   ├── super-duplex-dish-end.jpg
-│   ├── carbon-steel-dish-end.jpg
-│   ├── stainless-steel-dish-end.jpg
-│   ├── alloy-steel-dish-end.jpg
-│   ├── duplex-pipe-dish-end.jpg
-│   ├── cupro-nickel-dish-end.jpg
-│   ├── monel-dish-end.jpg
-│   ├── nickel-dish-end.jpg
-│   ├── hastelloy-dish-end.jpg
-│   ├── inconel-dish-end.jpg
-│   ├── titanium-dish-end.jpg
+│   ├── carbon-steel-dish-end.jpg / stainless-steel-dish-end.jpg
+│   ├── alloy-steel-dish-end.jpg / duplex-pipe-dish-end.jpg
+│   ├── cupro-nickel-dish-end.jpg / monel-dish-end.jpg
+│   ├── nickel-dish-end.jpg / hastelloy-dish-end.jpg
+│   ├── inconel-dish-end.jpg / titanium-dish-end.jpg
 │   ├── steel-factory.jpg
 │   ├── HEMISPHERE-BY-PETAL-CONSTRUCTION.jpeg
 │   ├── 5meter-ID-Dish-by-petal-&-Crown-construct.jpeg
 │   ├── 5-meter-ID-Dish-by-petal-&-Crown-construction.jpeg
-│   ├── Cone-by-petal-construction.jpeg
-│   ├── Cone.jpeg / cone1.jpeg
-│   └── ... (34 images total)
+│   ├── Cone-by-petal-construction.jpeg / Cone.jpeg / cone1.jpeg
+│   ├── assebled_petal_construction.jpeg     # Workshop gallery
+│   ├── Dish-end_underprogress.jpeg          # Workshop gallery
+│   ├── Hydraulic_Pressing_progress.jpeg     # Workshop gallery
+│   ├── large_cone_inprogress.jpeg           # Workshop gallery
+│   ├── moving_large_dishes_with builtin_and_external_crane_facilities.jpeg
+│   ├── Multiple_orders_inprogress.jpeg      # Workshop gallery
+│   ├── Petals_ready_to_deliver.jpeg         # Workshop gallery
+│   ├── prepared_half_rings.jpeg             # Workshop gallery
+│   ├── ready_half_rings.jpeg                # Workshop gallery
+│   ├── Utilization_of_Crane_for_Large_Hydraulic_Press.jpeg
+│   ├── List_of_Current_Customers.jpeg       # Reference document
+│   ├── Available_Facilities_list.jpeg       # Reference document
+│   ├── Inspection_agents_and_other_details.jpeg  # Reference document
+│   ├── mobile_view_issue_observed.jpeg      # Bug reference screenshot
+│   └── ... (46 images total)
 ├── .gitignore
 └── README.md
 ```
@@ -140,6 +147,10 @@ satyafab-new/
 - **Smooth scroll** for anchor links with header offset compensation
 - **Scroll-reveal animations** — elements fade in as they enter the viewport
 - **Counter animation** — stats bar values animate from 0 with easeOut easing
+- **Responsive header** — logo and text scale down gracefully on mobile to prevent overlap with banner content
+
+### Workshop Gallery
+- 9-image gallery grid showcasing live factory floor operations (petal construction, crane handling, pressing, half-ring components, delivery)
 
 ### Page Headers
 - Full-bleed background image (`flash.jpg`) with dark gradient overlay on About, Products, and Contact pages
