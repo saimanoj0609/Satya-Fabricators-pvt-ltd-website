@@ -355,3 +355,4 @@ This site can be deployed to any static hosting provider:
 - **Icons:** Replaced all emoji icons (📍📞📱✉️) with professional inline SVG icons (Feather style) in contact page details and footer across all pages
 - **CSS:** Added `.contact-icon` styling with circular accent-colored badges for contact section headings
 - **CSS:** Added `.footer__contact-item svg` styling for proper icon alignment in footer
+- **Products Section:** Redesigned "Dished End Shapes & Types" cards to gallery-style layout matching the Workshop Gallery — full-bleed images with gradient overlay, hover zoom effect, and 4-column responsive grid

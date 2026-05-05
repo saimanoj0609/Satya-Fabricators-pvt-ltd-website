@@ -623,45 +623,62 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Products / Shapes Section --- */
 .products__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-6);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
 }
 
 .product-card {
-  background: var(--color-white);
+  position: relative;
   border-radius: var(--radius-lg);
-  padding: var(--space-6);
-  text-align: center;
-  border: 2px solid var(--color-gray-200);
-  transition: all var(--transition-base);
-  cursor: default;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .product-card__img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  margin-bottom: var(--space-6);
-  border-radius: var(--radius-md);
-  background: var(--color-off-white);
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card__img {
+  transform: scale(1.08);
+}
+
+.product-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 40%, transparent 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-4);
+  transition: background 0.3s ease;
+}
+
+.product-card:hover .product-card__overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 80%);
 }
 
 .product-card__name {
-  font-size: var(--text-2xl);
+  font-size: var(--text-lg);
   font-weight: 600;
-  color: var(--color-gray-800);
+  color: var(--color-white);
 }
 
 .product-card__desc {
-  font-size: var(--text-base);
-  color: var(--color-gray-500);
-  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: var(--space-1);
 }
 
 /* --- Materials Section --- */
@@ -1329,6 +1346,10 @@ h1, h2, h3, h4, h5, h6 {
   .lightbox-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .products__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -1412,9 +1433,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--text-4xl);
   }
 
-  .capability-card__img,
-  .product-card__img {
+  .capability-card__img {
     height: 160px;
+  }
+
+  .products__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .form__row {
