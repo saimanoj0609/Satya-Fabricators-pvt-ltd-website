@@ -356,3 +356,5 @@ This site can be deployed to any static hosting provider:
 - **CSS:** Added `.contact-icon` styling with circular accent-colored badges for contact section headings
 - **CSS:** Added `.footer__contact-item svg` styling for proper icon alignment in footer
 - **Products Section:** Redesigned "Dished End Shapes & Types" cards to gallery-style layout matching the Workshop Gallery — full-bleed images with gradient overlay, hover zoom effect, and 4-column responsive grid
+- **Products Page:** Added overlay structure to "Other Product Types" grid for consistent gallery-style display
+- **About Page:** Replaced spinning machine card grid with single actual machine image (`spinning_machine.jpeg`) and detailed specs layout (diameter, thickness, knuckle rollers, OCF)
