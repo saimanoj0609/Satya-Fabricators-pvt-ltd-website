@@ -44,7 +44,7 @@ A modern, production-ready static website for **Satya Fabricators Pvt Ltd**, a w
 | **Home** | `index.html` | Hero banner, stats bar, capabilities, product grid, materials, certifications, lightbox gallery (9 images), customer list (47 clients), CTA |
 | **About** | `about.html` | Company profile, press capacities table, spinning machine specs, facilities (list format with highlighted Heat Treatment Furnace), quality control, inspection agencies |
 | **Products** | `products.html` | Detailed specs for Hemisphere, Semi-Ellipsoidal & Torispherical dished ends, plus 7 additional product types, lightbox gallery (17 images), materials, manufacturing codes |
-| **Contact** | `contact.html` | Office address, phone, email, Google Maps embed, inquiry form with validation |
+| **Contact** | `contact.html` | Office address, phone, email, Google Maps embed, inquiry form with Google Apps Script backend (emails + Google Sheet logging) |
 
 ---
 
@@ -60,7 +60,8 @@ satyafab-new/
 │   ├── styles.css          # Full design system & component styles (~1100 lines)
 │   └── pages.css           # Page-specific styles for About, Products, Contact (~440 lines)
 ├── js/
-│   └── script.js           # Interactions, animations, lightbox, form validation (~290 lines)
+│   └── script.js           # Interactions, animations, lightbox, form submission (~310 lines)
+├── google-apps-script.js       # Google Apps Script backend (deploy to Google Sheets)
 ├── images/
 │   ├── logo.jpg            # Company logo
 │   ├── flash.jpg           # Hero banner & page header background
@@ -173,10 +174,12 @@ satyafab-new/
 - Full-bleed product image background (`flat-dish-end.jpg`) with overlay for dramatic call-to-action
 
 ### Contact Form
+- **Backend:** Google Apps Script — submissions saved to Google Sheet + email notification to client
 - Client-side validation for required fields (name, email, subject, message)
 - Email format regex validation
 - Real-time error clearing on input
-- Success message display on valid submission
+- Professional SVG success confirmation with "Back to Home" button
+- Loading state on submit button ("Sending...")
 - Country dropdown (India, USA, UK, UAE, Saudi Arabia, Germany, Japan, Other)
 - Subject categories: Quote Request, General Inquiry, Technical Question, Factory Visit, Other
 

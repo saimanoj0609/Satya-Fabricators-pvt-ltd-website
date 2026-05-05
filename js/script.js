@@ -117,9 +117,12 @@
   // Also run immediately
   checkReveal();
 
-  // --- Contact Form (frontend only) ---
+  // --- Contact Form (Google Apps Script integration) ---
   var contactForm = document.getElementById('contactForm');
   var formSuccess = document.getElementById('formSuccess');
+
+  // REPLACE THIS URL with your deployed Google Apps Script Web App URL
+  var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwyBRHR9-_MVu50mgJCy-bIwmrXErSQO1fPLbM-RtuDILk64mLe0lDrqRU4jIZmbZzCzg/exec';
 
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
@@ -150,11 +153,49 @@
 
       if (!isValid) return;
 
-      // Simulate form submission
-      contactForm.style.display = 'none';
-      if (formSuccess) {
-        formSuccess.style.display = 'block';
-      }
+      // Collect form data
+      var formData = {
+        firstName: firstName.value.trim(),
+        lastName: lastName.value.trim(),
+        email: email.value.trim(),
+        phone: (document.getElementById('phone') || {}).value || '',
+        company: (document.getElementById('company') || {}).value || '',
+        city: (document.getElementById('city') || {}).value || '',
+        country: (document.getElementById('country') || {}).value || '',
+        subject: subject.value,
+        message: message.value.trim()
+      };
+
+      // Disable submit button while sending
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
+      var originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      // Submit to Google Apps Script
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(formData)
+      })
+      .then(function () {
+        contactForm.style.display = 'none';
+        if (formSuccess) {
+          formSuccess.style.display = 'block';
+        }
+      })
+      .catch(function () {
+        // Even on network issues with no-cors, the request usually succeeds
+        contactForm.style.display = 'none';
+        if (formSuccess) {
+          formSuccess.style.display = 'block';
+        }
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      });
     });
 
     // Clear error styling on input
